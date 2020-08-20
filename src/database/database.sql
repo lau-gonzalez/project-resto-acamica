@@ -71,9 +71,9 @@ CREATE TABLE `Users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `Users` (`user_id`, `user_name`, `user_lastname`, `user_mail`, `user_phone`, `user_address`, `user_password`, `user_active`, `user_admin`) VALUES
-(1, 'Juan', 'Gonzalez', 'juan@correo.com', 3012392132, 'calle 524 # 54 5', '123456789', 0, 1),
-(5, 'Pedro', 'Rodriguez', 'pedro@correo.com', 124132321, 'calle 25 # 27 5', '123456789', 0, 0),
-(8, 'Jose', 'Perez', 'jose@correo.com', 3212837253, 'calle 14 # 6 872', '123456789', 0, 0);
+(1, 'Laureano', 'Gonzalez', 'laureano@correo.com', 2213527361, 'calle 524 # 54 5', '123456789', 0, 1),
+(5, 'Pedro', 'Rodriguez', 'pedro@correo.com', 1152526363, 'calle 25 # 27 5', '123456789', 0, 0),
+(8, 'Jose', 'Perez', 'jose@correo.com', 1152563639, 'calle 14 # 6 872', '123456789', 0, 0);
 
 
 ALTER TABLE `Orders`
