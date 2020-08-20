@@ -1,0 +1,27 @@
+const router = require('express').Router();
+
+const {
+    products,
+    productById,
+    createProduct,
+    updateProduct,
+    deleteProductById
+} = require('../controllers/products');
+
+const {
+    validateToken,
+    validateRol,
+    validateProductParams,
+    validateProductId,
+    validateSesionUser
+} = require('../middlewares');
+
+
+router.get('/', products);
+router.post('/admin', [validateToken, validateSesionUser, validateRol], createProduct)
+router.get('/:idProduct', productById);
+router.put('/admin/:idProduct', [validateToken, validateSesionUser, validateRol, validateProductId, validateProductParams], updateProduct);
+router.delete('/admin/:idProduct', [validateToken, validateSesionUser, validateRol, validateProductId], deleteProductById);
+
+
+module.exports = router;
